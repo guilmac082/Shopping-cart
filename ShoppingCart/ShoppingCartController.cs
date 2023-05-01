@@ -21,8 +21,11 @@ namespace ShoppingCart.ShoppingCart
         }
 
         [HttpGet("{userId:int}")]
-        public ShoppingCart Get(int userId) => this.shoppingCartStore.Get(userId);
-
+        public ShoppingCart Get(int userId)
+        {
+            var data = this.shoppingCartStore.Get(userId);
+            return data;
+        }
         [HttpPost("{userId:int}/items")]
         public async Task<ShoppingCart> Post(int userId, [FromBody] int[] productIds)
         {
