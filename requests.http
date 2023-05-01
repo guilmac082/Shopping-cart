@@ -1,10 +1,10 @@
 #rest client
-GET http://localhost:5001/shoppingcart/123
+GET https://localhost:7292/shoppingcart/123
 
 
 
 #POST
-POST https://localhost:5001/shoppingcart/123/items
+POST https://localhost:7292/shoppingcart/123/items
 Accept: application/json
 Content-Type: application/json
 
@@ -12,5 +12,5 @@ Content-Type: application/json
 
 ###
 
-GET https://localhost:5001/events?start=0&end=20
+GET https://localhost:7292/events?start=0&end=20
 Accept: application/json
