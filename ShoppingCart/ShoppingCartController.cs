@@ -10,10 +10,7 @@ namespace ShoppingCart.ShoppingCart
         private readonly IShoppingCartStore shoppingCartStore;
         private readonly IProductCatalogClient productCatalogClient;
         private readonly IEventStore eventStore;
-        public ShoppingCartController(
-        IShoppingCartStore shoppingCartStore,
-        IProductCatalogClient productCatalogClient,
-        IEventStore eventStore)
+        public ShoppingCartController(IShoppingCartStore shoppingCartStore, IProductCatalogClient productCatalogClient, IEventStore eventStore)
         {
             this.shoppingCartStore = shoppingCartStore;
             this.productCatalogClient = productCatalogClient;
