@@ -18,5 +18,3 @@ namespace ShoppingCart.EventFeed
         }
     }
 }
-}
-
