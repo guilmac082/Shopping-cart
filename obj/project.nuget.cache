@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "BYpkGjKMBhPYYBIdyjgoFTzp0hSj9j9WVpgYsRXjipFRHqlbAQ6iKqSvCY8ONhyXKC9wadLslMPT6kjh+Y4p6g==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\ShoppingCartSln\\ShoppingCart\\ShoppingCart.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.extensions.http\\7.0.0\\microsoft.extensions.http.7.0.0.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.extensions.http.polly\\7.0.5\\microsoft.extensions.http.polly.7.0.5.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
