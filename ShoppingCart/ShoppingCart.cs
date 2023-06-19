@@ -4,7 +4,9 @@ namespace ShoppingCart.ShoppingCart
 {
     public class ShoppingCart
     {
-        private readonly HashSet<ShoppingCartItem> items = new();
+        private readonly HashSet<ShoppingCartItem> items = new HashSet<ShoppingCartItem>();
+        public int? Id { get; }
+
         public int UserId { get; }
         public IEnumerable<ShoppingCartItem> Items()
         {
@@ -14,6 +16,15 @@ namespace ShoppingCart.ShoppingCart
         {
             this.UserId = userId;
         }
+
+        public ShoppingCart(int? id, int userId, IEnumerable<ShoppingCartItem> items)
+        {
+            this.Id = id;
+            this.UserId = userId;
+            this.items = new HashSet<ShoppingCartItem>();
+        }
+
+
         public void AddItems(IEnumerable<ShoppingCartItem> shoppingCartItems, IEventStore eventStore)
         {
             foreach (var item in shoppingCartItems)
