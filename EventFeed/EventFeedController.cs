@@ -12,9 +12,10 @@ namespace ShoppingCart.EventFeed
         }
 
         [HttpGet("")]
-        public Event[] Get([FromQuery] long start, [FromQuery] long end = long.MaxValue)
+        public async Task<Event[]> Get([FromQuery] long start, [FromQuery] long end = long.MaxValue)
         {
-            return this.eventStore.GetEvents(start, end).ToArray();
+            var d = await this.eventStore.GetEvents(start, end);
+            return d.ToArray();
         }
     }
 }

@@ -18,27 +18,30 @@ namespace ShoppingCart.ShoppingCart
         }
 
         [HttpGet("{userId:int}")]
-        public ShoppingCart Get(int userId)
+        public async Task<ShoppingCart> Get(int userId)
         {
-            var data = this.shoppingCartStore.Get(userId);
+            var data = await this.shoppingCartStore.Get(userId);
             return data;
         }
+
         [HttpPost("{userId:int}/items")]
         public async Task<ShoppingCart> Post(int userId, [FromBody] int[] productIds)
         {
-            var shoppingCart = shoppingCartStore.Get(userId);
+            var shoppingCart = await shoppingCartStore.Get(userId);
             var shoppingCartItems = await this.productCatalogClient.GetShoppingCartItems(productIds);
             shoppingCart.AddItems(shoppingCartItems, eventStore);
-            shoppingCartStore.Save(shoppingCart);
+
+            await this.shoppingCartStore.Save(shoppingCart);
+
             return shoppingCart;
         }
 
         [HttpDelete("{userid:int}/items")]
-        public ShoppingCart Delete(int userId, [FromBody] int[] productIds)
+        public async Task<ShoppingCart> Delete(int userId, [FromBody] int[] productIds)
         {
-            var shoppingCart = this.shoppingCartStore.Get(userId);
+            var shoppingCart = await this.shoppingCartStore.Get(userId);
             shoppingCart.RemoveItems(productIds, this.eventStore);
-            this.shoppingCartStore.Save(shoppingCart);
+            await this.shoppingCartStore.Save(shoppingCart);
 
             return shoppingCart;
         }
