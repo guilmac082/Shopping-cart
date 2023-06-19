@@ -578,11 +578,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\ShoppingCartSln\\ShoppingCart\\ShoppingCart.csproj",
+      "projectUniqueName": "E:\\Projects\\ShoppingCart\\ShoppingCart.csproj",
       "projectName": "ShoppingCart",
-      "projectPath": "E:\\Projects\\ShoppingCartSln\\ShoppingCart\\ShoppingCart.csproj",
+      "projectPath": "E:\\Projects\\ShoppingCart\\ShoppingCart.csproj",
       "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\ShoppingCartSln\\ShoppingCart\\obj\\",
+      "outputPath": "E:\\Projects\\ShoppingCart\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
