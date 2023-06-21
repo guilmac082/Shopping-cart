@@ -6,11 +6,11 @@
 GET {{host}}/shoppingcart/{{user}}
 
 ####
-POST {{host}}/1/items
+POST {{host}}/2/items
 Accept: application/json
 Content-Type: application/json
 
-[1, 2]
+[3, 4]
 
 ###
 
