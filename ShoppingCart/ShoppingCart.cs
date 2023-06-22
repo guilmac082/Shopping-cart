@@ -29,6 +29,7 @@ namespace ShoppingCart.ShoppingCart
         {
             foreach (var item in shoppingCartItems)
                 if (this.items.Add(item))
+                    //აქ ვიძახებთ ივენთებს, ჩვეულებრივი ლოგირების პონტია სინამდვილეში
                     eventStore.Raise("ShoppingCartItemAdded", new { UserId, item });
         }
         public void RemoveItems(int[] productCatalogueIds, IEventStore eventStore)

@@ -31,6 +31,8 @@ namespace ShoppingCart.EventFeed
 
         public async Task Raise(string eventName, object content)
         {
+
+            //ვლოგავთ ივენთებს სათითაოდ თან ჯეისონად ვინახავთ მთლიანად რაც მოხდა
             var jsonContent = JsonSerializer.Serialize(content);
 
             await using var conn = new SqlConnection(this.connectionString);
