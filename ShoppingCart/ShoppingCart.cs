@@ -17,11 +17,11 @@ namespace ShoppingCart.ShoppingCart
             this.UserId = userId;
         }
 
-        public ShoppingCart(int? id, int userId, IEnumerable<ShoppingCartItem> items)
+        public ShoppingCart(int? id, int userId, IEnumerable<ShoppingCartItem> _items)
         {
             this.Id = id;
             this.UserId = userId;
-            this.items = new HashSet<ShoppingCartItem>();
+            this.items = _items.ToHashSet();
         }
 
 

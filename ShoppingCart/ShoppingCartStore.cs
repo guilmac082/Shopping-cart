@@ -50,8 +50,11 @@ namespace ShoppingCart.ShoppingCart
             {
                 var shoppingCartId = shoppingCart.Id ?? await conn.QuerySingleAsync<int>(InsertShoppingCartSql, new { shoppingCart.UserId }, tx);
 
+                //ვშლით ამ იუზერზე მანამდე არსებულ ჩანაწერებს მთლიანად
                 await conn.ExecuteAsync(DeleteAllForShoppingCartSql, new { UserId = shoppingCart.UserId }, tx);
 
+
+                //ვამატებთ კალათაში ხელახლა მოცემულ ნივთებს
                 await conn.ExecuteAsync(AddAllForShoppingCartSql, shoppingCart.Items().Select(x => new
                 {
                     shoppingCartId,
