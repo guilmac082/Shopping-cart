@@ -39,7 +39,7 @@ namespace ShoppingCart.EventFeed
             await connection.ConnectAsync();
             var res = await connection.AppendToStreamAsync("ShoppingCart", ExpectedVersion.Any,
                 new EventData(Guid.NewGuid(), "ShoppingCartEvent", isJson: true, data: Encoding.UTF8.GetBytes(JsonSerializer.Serialize(content)),
-                metadata: Encoding.UTF8.GetBytes(JsonSerializer.Serialize(new EventMetadata
+                            metadata: Encoding.UTF8.GetBytes(JsonSerializer.Serialize(new EventMetadata
                                                                                             (
                                                                                               DateTimeOffset.UtcNow,
                                                                                               eventName
