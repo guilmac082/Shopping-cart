@@ -12,7 +12,7 @@ builder.Services.AddHttpClient<IProductCatalogClient, ProductCatalogClient>()
 
 builder.Services.AddScoped<IShoppingCartStore, ShoppingCartStore>();
 //builder.Services.AddScoped<IProductCatalogClient, ProductCatalogClient>();
-builder.Services.AddScoped<IEventStore, EventStore>();
+builder.Services.AddScoped<IEventStore, EsEventStore>();
 
 
 var app = builder.Build();

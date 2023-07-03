@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[2.0.138, )"
             },
+            "EventStore.Client": {
+              "target": "Package",
+              "version": "[22.0.0, )"
+            },
             "Microsoft.Extensions.Http.Polly": {
               "target": "Package",
               "version": "[7.0.5, )"
