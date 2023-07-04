@@ -19,7 +19,7 @@ namespace ShoppingCart
 
         public object? Get(string productsResource)
         {
-            if (cache.TryGetValue(productsResource, out var value) && value.Item1 > DateTimeOffset.UtcNow)
+            if (cache.TryGetValue(productsResource, out var value))
                 return value;
         
             cache.Remove(productsResource);
