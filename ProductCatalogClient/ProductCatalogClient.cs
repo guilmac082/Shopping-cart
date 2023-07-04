@@ -19,7 +19,7 @@ namespace ShoppingCart.ProductCatalogClient
     {
         private readonly HttpClient client;
         private readonly ICache cache;
-        private static string productCatalogBaseUrl = @"https://git.io/JeHiE";
+        private static string productCatalogBaseUrl = @"https://localhost:7096/products";
         private static string getProductPathTemplate = "?productIds=[{0}]";
 
         public ProductCatalogClient(HttpClient client, ICache cache)
@@ -51,8 +51,10 @@ namespace ShoppingCart.ProductCatalogClient
 
         private void AddToCache(string resource, HttpResponseMessage response)
         {
-            var cacheHeader = response.Headers.FirstOrDefault(h => h.Key == "cache-control");
-            if (!string.IsNullOrEmpty(cacheHeader.Key) && CacheControlHeaderValue.TryParse(cacheHeader.Value.ToString(), out var cacheControl) && cacheControl.MaxAge.HasValue)
+            var cacheHeader = response.Headers.FirstOrDefault(h => h.Key == "Cache-Control");
+            var val = cacheHeader.Value.FirstOrDefault();
+
+            if (!string.IsNullOrEmpty(cacheHeader.Key) && CacheControlHeaderValue.TryParse(val, out var cacheControl) && cacheControl!.MaxAge.HasValue)
                 this.cache.Add(resource, response, cacheControl.MaxAge.Value);
         }
 
