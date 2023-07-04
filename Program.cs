@@ -1,4 +1,5 @@
 using Polly;
+using ShoppingCart;
 using ShoppingCart.EventFeed;
 using ShoppingCart.ProductCatalogClient;
 using ShoppingCart.ShoppingCart;
@@ -13,6 +14,7 @@ builder.Services.AddHttpClient<IProductCatalogClient, ProductCatalogClient>()
 builder.Services.AddScoped<IShoppingCartStore, ShoppingCartStore>();
 //builder.Services.AddScoped<IProductCatalogClient, ProductCatalogClient>();
 builder.Services.AddScoped<IEventStore, EsEventStore>();
+builder.Services.AddScoped<ICache,Cache>();
 
 
 var app = builder.Build();

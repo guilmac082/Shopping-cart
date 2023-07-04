@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		request.http = request.http
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog", "..\ProductCatalog\ProductCatalog.csproj", "{D5069986-2A94-4522-8175-6EFB069C0447}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{EC8C7724-D2C2-4C33-AE97-AF079F23B683}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC8C7724-D2C2-4C33-AE97-AF079F23B683}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC8C7724-D2C2-4C33-AE97-AF079F23B683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5069986-2A94-4522-8175-6EFB069C0447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5069986-2A94-4522-8175-6EFB069C0447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5069986-2A94-4522-8175-6EFB069C0447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5069986-2A94-4522-8175-6EFB069C0447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

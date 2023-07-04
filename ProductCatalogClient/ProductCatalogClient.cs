@@ -18,14 +18,16 @@ namespace ShoppingCart.ProductCatalogClient
     public class ProductCatalogClient : IProductCatalogClient
     {
         private readonly HttpClient client;
+        private readonly ICache cache;
         private static string productCatalogBaseUrl = @"https://git.io/JeHiE";
         private static string getProductPathTemplate = "?productIds=[{0}]";
 
-        public ProductCatalogClient(HttpClient client)
+        public ProductCatalogClient(HttpClient client, ICache cache)
         {
             client.BaseAddress = new Uri(productCatalogBaseUrl);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             this.client = client;
+            this.cache = cache;
         }
 
         public async Task<IEnumerable<ShoppingCartItem>> GetShoppingCartItems(int[] productCatalogIds)
@@ -37,7 +39,21 @@ namespace ShoppingCart.ProductCatalogClient
         private async Task<HttpResponseMessage> RequestProductFromProductCatalog(int[] productCatalogIds)
         {
             var productsResource = string.Format(getProductPathTemplate, string.Join(",", productCatalogIds));
-            return await client.GetAsync(productsResource);
+
+            var response = this.cache.Get(productsResource) as HttpResponseMessage;
+            if (response is null)
+            {
+                response = await this.client.GetAsync(productsResource);
+                AddToCache(productsResource, response);
+            }
+            return response;
+        }
+
+        private void AddToCache(string resource, HttpResponseMessage response)
+        {
+            var cacheHeader = response.Headers.FirstOrDefault(h => h.Key == "cache-control");
+            if (!string.IsNullOrEmpty(cacheHeader.Key) && CacheControlHeaderValue.TryParse(cacheHeader.Value.ToString(), out var cacheControl) && cacheControl.MaxAge.HasValue)
+                this.cache.Add(resource, response, cacheControl.MaxAge.Value);
         }
 
         private static async Task<IEnumerable<ShoppingCartItem>> ConvertToShoppingCartItems(HttpResponseMessage response)
