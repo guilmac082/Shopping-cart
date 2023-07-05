@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ezWOrKyYPJjskysPtoNQBR3NpkTyFlinJOiczecQj+ujahQbbr81NyNFr3WbxdXjjdiP4ejeKFX4l6jSAaa0xQ==",
+  "dgSpecHash": "BtuMTLj7p4LRT8xadeM+YH4HvNxb5vHi++c5a+y4MHlKsnF2TgUb7358/YlkFiR+ptxvFO52vXIjnA8NoQPOLA==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\ShoppingCart\\ShoppingCart.csproj",
+  "projectFilePath": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ShoppingCart.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\George\\.nuget\\packages\\dapper\\2.0.138\\dapper.2.0.138.nupkg.sha512",
     "C:\\Users\\George\\.nuget\\packages\\eventstore.client\\22.0.0\\eventstore.client.22.0.0.nupkg.sha512",

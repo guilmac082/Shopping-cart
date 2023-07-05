@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ShoppingCart.csproj": {}
+    "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ProdCatalogService\\ProdCatalogService.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ShoppingCart.csproj": {
+    "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ProdCatalogService\\ProdCatalogService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ShoppingCart.csproj",
-        "projectName": "ShoppingCart",
-        "projectPath": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ShoppingCart.csproj",
+        "projectUniqueName": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ProdCatalogService\\ProdCatalogService.csproj",
+        "projectName": "ProdCatalogService",
+        "projectPath": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ProdCatalogService\\ProdCatalogService.csproj",
         "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\obj\\",
+        "outputPath": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ProdCatalogService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,25 +40,13 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.0.138, )"
-            },
-            "EventStore.Client": {
-              "target": "Package",
-              "version": "[22.0.0, )"
-            },
-            "Microsoft.Extensions.Http.Polly": {
+            "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.5, )"
             },
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[1.17.2, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.5, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [

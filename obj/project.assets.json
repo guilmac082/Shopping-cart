@@ -4065,11 +4065,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\ShoppingCart\\ShoppingCart.csproj",
+      "projectUniqueName": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ShoppingCart.csproj",
       "projectName": "ShoppingCart",
-      "projectPath": "E:\\Projects\\ShoppingCart\\ShoppingCart.csproj",
+      "projectPath": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\ShoppingCart.csproj",
       "packagesPath": "C:\\Users\\George\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\ShoppingCart\\obj\\",
+      "outputPath": "E:\\Projects\\Shopping-Cart\\ShoppingCart\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\George\\AppData\\Roaming\\NuGet\\NuGet.Config",
